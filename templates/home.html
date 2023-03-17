@@ -26,27 +26,34 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img
+      id="banner"
+      class="img-fluid"
+      src="http://127.0.0.1:5000/static/banner.jpg"
+      alt=""
+    />
     <div class="container">
       <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-      <img
-        id="banner"
-        class="img-fluid"
-        src="http://127.0.0.1:5000/static/banner.jpg"
-        alt=""
-      />
-      <h2 class="text-center mt-2 mb-4">About Us</h2>
       <p class="lead">
-        Early Connect is a company that provides a platform for students to
-        connect with companies and vice versa. We are a team of 4 people who are
+        InternHUB is a company that provides a platform for students to connect
+        with companies and vice versa. We are a team of 4 people who are
         passionate about helping students and companies connect with each other.
+        Our company looks for students who are passionate about technology and
+        are looking to gain experience in the field. We are looking for students
+        who are willing to learn and grow with us.
       </p>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>{% for job in jobs %} {% include 'jobItem.html' %} {% endfor %}</div>
       <div class="text-center mt-4">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="lead mt-5">Copyright 2023, Early Connect</p>
+        <a
+          class="btn btn-primary btn-lg"
+          href="mailto:jasleen080104@gmail.com?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A"
+          >Contact Us</a
+        >
       </div>
     </div>
+    {% include 'footer.html' %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
       integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"

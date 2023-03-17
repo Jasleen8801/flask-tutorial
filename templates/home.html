@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      #banner {
+        height: 360px;
+        object-fit: cover;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+      <img
+        id="banner"
+        class="img-fluid"
+        src="http://127.0.0.1:5000/static/banner.jpg"
+        alt=""
+      />
+      <h2 class="text-center mt-2 mb-4">About Us</h2>
+      <p class="lead">
+        Early Connect is a company that provides a platform for students to
+        connect with companies and vice versa. We are a team of 4 people who are
+        passionate about helping students and companies connect with each other.
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>{% for job in jobs %} {% include 'jobItem.html' %} {% endfor %}</div>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="lead mt-5">Copyright 2023, Early Connect</p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
